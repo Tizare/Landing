@@ -1,0 +1,340 @@
+@import vars
+
+*
+    padding: 0
+    margin: 0
+    outline: none
+p, li
+    font-size: 20px
+    line-height: 24px
+    text-align: center
+    color: $colorText
+h2
+    font-weight: 900
+    font-size: 36px
+    line-height: 42px
+    text-align: center
+    margin-top: 100px
+    margin-bottom: 35px
+    color: $colorText
+a
+    text-decoration: none
+.ol
+    list-style-type: none
+body
+    font-family: 'Roboto', sans-serif
+html, body
+    height: 100%
+.center
+    padding-left: calc( 50% - 640px )
+    padding-right: calc( 50% - 640px )
+.hidden-in-beggin
+    display: none
+.hidden-in-second
+    display: none
+.menuMini
+    display: none
+#check
+    display: none
+.wrapper
+    min-height: 100%
+    display: flex
+    flex-direction: column
+.top
+    flex-grow: 1
+.header
+    width: 100%
+    background-color: $colorMain
+    &Menu
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 100px
+        max-width: 1160px
+        margin: 0 auto
+.menu
+    display: inline-block
+    height: 30px
+    padding: 0 22px
+    &:not(:first-child)
+        border-left: 1px solid #494949
+    &:first-child
+        padding: 0
+        margin-right: 22px
+    & a
+        display: block
+        color: #FFFFFF
+        font-weight: 500
+        font-size: 12px
+        line-height: 30px
+        border-bottom: 1px solid $colorMain
+        transition: border-bottom $time
+        &:hover
+            border-bottom: 1px solid #E0E1E2
+.logo
+    margin-left: 62px
+.menu-burger
+    position: absolute
+    top: 54px
+    right: 54px
+.check:checked ~ .menuMini
+    display: flex
+.menuMini
+    position: absolute
+    min-height: 894px
+    width: 100%
+    background-color: $colorMain
+    z-index: 2
+    top: 0
+    right: 0
+    flex-direction: column
+    align-items: center
+    padding-bottom: 64px
+    &Logo
+        margin-top: 64px
+        margin-bottom: 123px
+    &Text
+        font-weight: 900
+        font-size: 40px
+        line-height: 47px
+        text-align: center
+        color: #C4C4C4
+        margin-bottom: 53px
+        transition: all $time
+        box-sizing: border-box
+        border-bottom: 4px solid $colorMain
+        padding-bottom: 6px
+        &:hover
+            color: #FFFFFF
+            border-bottom: 4px solid #FFFFFF
+.close
+    position: absolute
+    top: 51px
+    right: 64px
+    transition: transform $time
+    &:hover
+        transform: scale(1.1)
+
+.section
+    display: flex
+    flex-direction: column
+    align-items: center
+.promo
+    background: #E0E1E2
+    position: relative
+    &Header
+        position: absolute
+    &Img
+        max-width: 1160px
+        display: flex
+        margin-top: 16px
+        & img
+            width: 100%
+.next
+    padding-top: 50px
+    padding-bottom: 56px
+    transition: transform $time
+    &:hover
+        transform: scale(1.1)
+.without
+    background: $colorBack
+    height: 809px
+    &Svg
+        margin-top: 79px
+    &Header
+        margin-top: 40px
+    &Text
+        max-width: 730px
+        margin-bottom: 60px
+    &Picture
+        display: flex
+        position: absolute
+        top: 67px
+        left: -283px
+
+    &Img:first-child
+        margin-right: 73px
+        margin-left: 16px
+
+    &Content
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+        width: 760px
+.days
+    display: flex
+    align-items: start
+    &Day
+        font-weight: 900
+        font-size: 96px
+        line-height: 112px
+        text-align: center
+        text-transform: uppercase
+        color: #C4C4C4
+    &Big
+        font-size: 300px
+        line-height: 270px
+        margin-left: 36px
+.anywhere
+    &Text
+        max-width: 736px
+    &Blocks
+        display: flex
+        justify-content: center
+        margin-top: 50px
+        margin-bottom: 50px
+    &Block
+        border: 1px solid $colorMain
+        box-sizing: border-box
+        height: 140px
+        width: 236px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &Heading
+            margin-top: 0px
+            margin-bottom: 0
+            text-transform: uppercase
+
+        &:not(:first-child)
+            margin-left: 32px
+.slider
+    display: flex
+    flex-direction: column
+    align-items: center
+    &Heading
+        font-weight: 900
+        font-size: 20px
+        line-height: 23px
+        text-align: center
+        color: #2F3132
+        margin-top: 39px
+    &Text
+        max-width: 765px
+        margin-bottom: 70px
+        margin-top: 32px
+    &Choose
+        display: flex
+        align-items: center
+        padding-top: 13px
+        justify-content: center
+        &Icon
+            margin: 0 13px
+            transition: transform $time
+            &:hover
+                transform: scale(1.2)
+    &Imges
+        position: relative
+        height: 573px
+        max-width: 1280px
+        & img:target
+            z-index: 100
+    &Img
+        position: absolute
+        padding-top: 50px
+        bottom: 0
+        right: -640px
+
+.different
+    background-color: $colorBack
+    &Container
+        background-image: url(img/difBG.jpg)
+        height: 1332px
+        background-repeat: no-repeat
+        background-position: center
+        background-position-y: bottom
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    &Text
+        max-width: 958px
+        &:not(:first-child)
+            padding-top: 16px
+    &Ol
+        margin-top: 69px
+        counter-reset: item
+        display: grid
+        grid-template-columns: 2fr 2fr 1fr
+        max-width: 958px
+    &Li
+        text-align: start
+        height: 60px
+        display: flex
+        &::before
+            content: counter(item)"."
+            counter-increment: item
+            padding-right: 6px
+        &:not(:last-child)
+            margin-right: 12px
+        &:not(:first-child)
+            border-left: 1px solid #494949
+            padding-left: 50px
+            box-sizing: border-box
+.anytime
+    background-color: $colorBack
+    &Text
+        max-width: 800px
+        margin-bottom: 54px
+    &Block
+        width: 749px
+        height: 196px
+        background-color: #C4C4C4
+        margin-bottom: 71px
+        &Icons
+            display: flex
+            justify-content: center
+        &Icon
+            margin: 38px 18px 25px
+        &Text
+            color: #FFFFFF
+            padding: 0 38px
+    &Img
+        box-sizing: border-box
+        padding: 0 16px
+        display: flex
+        & img
+            width: 100%
+.comfort
+    padding-top: 100px
+.faster
+    padding-bottom: 100px
+.comfort, .faster
+    display: flex
+    flex-direction: row
+    &Img
+        width: 50%
+    &Content
+        width: 50%
+        padding-left: 32px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        box-sizing: border-box
+    &Heading
+        margin-top: 0
+        margin-bottom: 28px
+        width: 281px
+        text-align: start
+    &Text
+        width: 400px
+        text-align: start
+.faster
+    &Heading
+        width: 317px
+        text-align: right
+    &Content
+        align-items: flex-end
+        padding-right: 32px
+    &Text
+        text-align: right
+.footer
+    height: 150px
+    background-color: $colorMain
+    padding-top: 47px
+    box-sizing: border-box
+    & p
+        color: #C7C8C8
+
+@import media
